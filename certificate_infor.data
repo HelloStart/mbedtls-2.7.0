@@ -1,0 +1,28 @@
+X509 Certificate information #1
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_RSA_C:MBEDTLS_SHA1_C
+x509_cert_info:"tests/data_files/server1.crt":"cert. version     \: 3\nserial number     \: 01\nissuer name       \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nsubject name      \: C=NL, O=PolarSSL, CN=PolarSSL Server 1\nissued  on        \: 2011-02-12 14\:44\:06\nexpires on        \: 2021-02-12 14\:44\:06\nsigned using      \: RSA with SHA1\nRSA key size      \: 2048 bits\nbasic constraints \: CA=false\n"
+
+X509 Certificate information #3
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_RSA_C:MBEDTLS_SHA1_C
+x509_cert_info:"tests/data_files/test-ca.crt":"cert. version     \: 3\nserial number     \: 00\nissuer name       \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nsubject name      \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nissued  on        \: 2011-02-12 14\:44\:00\nexpires on        \: 2021-02-12 14\:44\:00\nsigned using      \: RSA with SHA1\nRSA key size      \: 2048 bits\nbasic constraints \: CA=true\n"
+
+X509 Certificate information SHA256 Digest
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_RSA_C:MBEDTLS_SHA256_C
+x509_cert_info:"tests/data_files/cert_sha256.crt":"cert. version     \: 3\nserial number     \: 09\nissuer name       \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nsubject name      \: C=NL, O=PolarSSL, CN=PolarSSL Cert SHA256\nissued  on        \: 2011-02-12 14\:44\:07\nexpires on        \: 2021-02-12 14\:44\:07\nsigned using      \: RSA with SHA-256\nRSA key size      \: 2048 bits\nbasic constraints \: CA=false\n"
+
+X509 Certificate information RSA-PSS, SHA256 Digest
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_X509_RSASSA_PSS_SUPPORT:MBEDTLS_SHA256_C
+x509_cert_info:"tests/data_files/server9-sha256.crt":"cert. version     \: 3\nserial number     \: 18\nissuer name       \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nsubject name      \: C=NL, O=PolarSSL, CN=localhost\nissued  on        \: 2014-01-20 13\:57\:45\nexpires on        \: 2024-01-18 13\:57\:45\nsigned using      \: RSASSA-PSS (SHA256, MGF1-SHA256, 0xDE)\nRSA key size      \: 1024 bits\nbasic constraints \: CA=false\n"
+
+X509 CRL Information SHA256 Digest
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_SHA256_C
+mbedtls_x509_crl_info:"tests/data_files/crl_sha256.pem":"CRL version   \: 1\nissuer name   \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nthis update   \: 2011-02-12 14\:44\:07\nnext update   \: 2011-04-13 14\:44\:07\nRevoked certificates\:\nserial number\: 01 revocation date\: 2011-02-12 14\:44\:07\nserial number\: 03 revocation date\: 2011-02-12 14\:44\:07\nsigned using  \: RSA with SHA-256\n"
+
+X509 CRL information RSA-PSS, SHA256 Digest
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_X509_RSASSA_PSS_SUPPORT:MBEDTLS_SHA256_C
+mbedtls_x509_crl_info:"tests/data_files/crl-rsa-pss-sha256.pem":"CRL version   \: 2\nissuer name   \: C=NL, O=PolarSSL, CN=PolarSSL Test CA\nthis update   \: 2014-01-20 13\:56\:16\nnext update   \: 2024-01-18 13\:56\:16\nRevoked certificates\:\nserial number\: 0A revocation date\: 2013-09-24 16\:28\:38\nserial number\: 16 revocation date\: 2014-01-20 13\:43\:05\nsigned using  \: RSASSA-PSS (SHA256, MGF1-SHA256, 0xDE)\n"
+
+X509 CSR Information RSA with SHA256
+depends_on:MBEDTLS_PEM_PARSE_C:MBEDTLS_SHA256_C
+mbedtls_x509_csr_info:"tests/data_files/server1.req.sha256":"CSR version   \: 1\nsubject name  \: C=NL, O=PolarSSL, CN=PolarSSL Server 1\nsigned using  \: RSA with SHA-256\nRSA key size  \: 2048 bits\n"
+

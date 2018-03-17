@@ -1,0 +1,23 @@
+X509 CRT verify chain #2 (zero pathlen root)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_RSA_C
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert23.crt tests/data_files/dir4/cert22.crt":"tests/data_files/dir4/cert21.crt":MBEDTLS_X509_BADCERT_NOT_TRUSTED
+
+X509 CRT verify chain #3 (nonzero pathlen root)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_RSA_C
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert34.crt tests/data_files/dir4/cert33.crt tests/data_files/dir4/cert32.crt":"tests/data_files/dir4/cert31.crt":MBEDTLS_X509_BADCERT_NOT_TRUSTED
+
+X509 CRT verify chain #4 (nonzero pathlen intermediate)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_RSA_C
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert45.crt tests/data_files/dir4/cert44.crt tests/data_files/dir4/cert43.crt tests/data_files/dir4/cert42.crt":"tests/data_files/dir4/cert41.crt":MBEDTLS_X509_BADCERT_NOT_TRUSTED
+
+X509 CRT verify chain #7 (maxpathlen root, self signed in path)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_RSA_C
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert74.crt tests/data_files/dir4/cert73.crt tests/data_files/dir4/cert72.crt":"tests/data_files/dir4/cert71.crt":0
+
+X509 CRT verify chain #8 (self signed maxpathlen root)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_RSA_C
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert61.crt tests/data_files/dir4/cert63.crt tests/data_files/dir4/cert62.crt":"tests/data_files/dir4/cert61.crt":0
+
+X509 CRT verify chain #10 (zero pathlen root, valid)
+depends_on:MBEDTLS_SHA256_C:MBEDTLS_ECDSA_C:MBEDTLS_ECP_DP_SECP256R1_ENABLED
+mbedtls_x509_crt_verify_chain:"tests/data_files/dir4/cert92.crt":"tests/data_files/dir4/cert91.crt":0
